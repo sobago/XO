@@ -16,11 +16,10 @@ step_count = player_x
 counter = 0
 
 def print_field():
-    return print(f'\t0\t1\t2\n'
-          f'0\t{field[0][0][0]}\t{field[0][1][0]}\t{field[0][2][0]}\n'
-          f'1\t{field[1][0][0]}\t{field[1][1][0]}\t{field[1][2][0]}\n'
-          f'2\t{field[2][0][0]}\t{field[2][1][0]}\t{field[2][2][0]}\n'
-          f'x - {player_x}, o - {player_o}\n')
+    print(f'\t0\t1\t2')
+    for i in range(3):
+        print(f'{i}\t{field[i][0][0]}\t{field[i][1][0]}\t{field[i][2][0]}')
+    print(f'x - {player_x}, o - {player_o}\n')
 
 def step():
     while True:
